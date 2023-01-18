@@ -20,15 +20,15 @@ export default function SearchHeader() {
         <img src="" alt="" />
         <SiYoutubetv className='flex  items-stretch justify-center  text-9xl  text-brand ' />
       </Link>
-      <form className=' w-full' onSubmit={handleSubmit}>
+      <form className=' w-full ' onSubmit={handleSubmit}>
         <input
-          className=' w-7/12 p-4 h-9 outline-none bg-black text-gray-50'
+          className='rounded-l-full w-7/12 p-4 h-10 outline-none bg-black text-gray-50'
           type='text'
           placeholder='Search...'
           value={text}
           onChange={(e) => setText(e.target.value)}
         />
-        <button className='bg-zinc-600   h-9  px-4  '>
+        <button className='bg-zinc-600  rounded-r-full  h-9  px-4  '>
           <BsSearch />
         </button>
       </form>
