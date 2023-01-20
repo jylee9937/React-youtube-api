@@ -1,6 +1,6 @@
 import React from 'react';
-import { formatAgo } from '../util/date';
 import { useNavigate } from 'react-router-dom';
+import {format} from "timeago.js";
 
 export default function VideoCard({ video, type }) {
   const { title, thumbnails, channelTitle, publishedAt } = video.snippet;
@@ -21,7 +21,7 @@ export default function VideoCard({ video, type }) {
       <div>
         <p className='font-semibold my-2 line-clamp-2'>{title}</p>
         <p className='text-sm opacity-80'>{channelTitle}</p>
-        <p className='text-sm opacity-80'>{formatAgo(publishedAt)}</p>
+        <p className='text-sm opacity-80'>{format(publishedAt, 'en_US')}</p>
       </div>
     </li>
   );
